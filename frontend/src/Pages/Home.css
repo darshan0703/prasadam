@@ -1,0 +1,513 @@
+/* ==========================================================================
+   PRASADAM KIOSK — WELCOME SCREEN (1080 x 1920 PORTRAIT)
+   Palette: Warm Cream (#FAF7F0), Deep Green (#0C3823), Muted Gold (#C5A059)
+   ========================================================================== */
+
+.prasadam-home {
+  position: relative;
+  width: 1080px;
+  height: 1920px;
+  background-color: var(--bg-cream);
+  background-image: 
+    radial-gradient(ellipse 90% 60% at 50% 20%, rgba(255, 255, 255, 0.7) 0%, rgba(250, 247, 240, 0) 70%),
+    linear-gradient(180deg, #FDFBF7 0%, #FAF7F0 45%, #F4ECE0 100%);
+  overflow: hidden;
+  box-sizing: border-box;
+  color: var(--text-primary);
+  display: flex;
+  flex-direction: column;
+}
+
+/* --------------------------------------------------------------------------
+   Ambient Lighting & Background Elements
+   -------------------------------------------------------------------------- */
+
+.home-ambient-glow {
+  position: absolute;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.home-ambient-glow.top {
+  top: -150px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 900px;
+  height: 500px;
+  background: radial-gradient(circle, rgba(197, 160, 89, 0.18) 0%, rgba(197, 160, 89, 0) 70%);
+}
+
+.home-ambient-glow.bottom {
+  bottom: -100px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 1000px;
+  height: 450px;
+  background: radial-gradient(circle, rgba(12, 56, 35, 0.08) 0%, rgba(12, 56, 35, 0) 70%);
+}
+
+/* --------------------------------------------------------------------------
+   Heritage Border Ornaments (Restrained Luxury Framing)
+   -------------------------------------------------------------------------- */
+
+.heritage-border-corner {
+  position: absolute;
+  width: 70px;
+  height: 70px;
+  border: 2px solid var(--accent-gold);
+  pointer-events: none;
+  z-index: 5;
+  opacity: 0.65;
+}
+
+.heritage-border-corner.top-left {
+  top: 36px;
+  left: 36px;
+  border-right: none;
+  border-bottom: none;
+}
+
+.heritage-border-corner.top-right {
+  top: 36px;
+  right: 36px;
+  border-left: none;
+  border-bottom: none;
+}
+
+.heritage-border-corner.bottom-left {
+  bottom: 36px;
+  left: 36px;
+  border-right: none;
+  border-top: none;
+}
+
+.heritage-border-corner.bottom-right {
+  bottom: 36px;
+  right: 36px;
+  border-left: none;
+  border-top: none;
+}
+
+/* --------------------------------------------------------------------------
+   Main Container Layout
+   -------------------------------------------------------------------------- */
+
+.home-inner-container {
+  position: relative;
+  z-index: 10;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 85px 60px 80px 60px;
+  box-sizing: border-box;
+}
+
+/* --------------------------------------------------------------------------
+   1. Restaurant Identity Section
+   -------------------------------------------------------------------------- */
+
+.restaurant-identity-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  width: 100%;
+}
+
+.insignia-emblem {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  width: 100%;
+  max-width: 480px;
+  margin-bottom: 20px;
+}
+
+.insignia-line {
+  flex: 1;
+  height: 1.5px;
+  background: linear-gradient(90deg, transparent, var(--accent-gold), transparent);
+}
+
+.insignia-symbol {
+  width: 38px;
+  height: 38px;
+  border: 1.5px solid var(--accent-gold);
+  transform: rotate(45deg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #FFFDF9;
+}
+
+.gold-sparkle {
+  color: var(--accent-gold-dark);
+  transform: rotate(-45deg);
+}
+
+.restaurant-name-kannada {
+  font-family: var(--font-kannada);
+  font-size: 58px;
+  font-weight: 700;
+  color: var(--accent-gold-dark);
+  letter-spacing: 3px;
+  margin: 0 0 4px 0;
+  line-height: 1.2;
+  text-shadow: 0 2px 10px rgba(197, 160, 89, 0.2);
+}
+
+.restaurant-name-english {
+  font-family: var(--font-serif);
+  font-size: 92px;
+  font-weight: 800;
+  letter-spacing: 14px;
+  color: var(--primary-green);
+  margin: 0 0 16px 0;
+  line-height: 1;
+  text-indent: 14px; /* balance letter-spacing visually */
+}
+
+.identity-subtitle-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  padding: 8px 24px;
+  border-top: 1px solid rgba(197, 160, 89, 0.4);
+  border-bottom: 1px solid rgba(197, 160, 89, 0.4);
+}
+
+.gold-ornament-bullet {
+  color: var(--accent-gold);
+  font-size: 14px;
+}
+
+.subtitle-text {
+  font-family: var(--font-sans);
+  font-size: 20px;
+  font-weight: 600;
+  letter-spacing: 6px;
+  color: var(--text-secondary);
+  text-transform: uppercase;
+}
+
+/* --------------------------------------------------------------------------
+   2. Hero Section
+   -------------------------------------------------------------------------- */
+
+.hero-showcase-section {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 10px 0;
+}
+
+.hero-frame-outer {
+  position: relative;
+  width: 920px;
+  height: 820px;
+  padding: 14px;
+  background: #FFFFFF;
+  border: 1.5px solid var(--accent-gold-light);
+  border-radius: 44px;
+  box-shadow: 
+    0 24px 60px rgba(12, 56, 35, 0.12),
+    0 2px 8px rgba(197, 160, 89, 0.2);
+}
+
+.hero-frame-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  border-radius: 34px;
+  overflow: hidden;
+  background: #E8E1D3;
+}
+
+.hero-ambience-video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+  pointer-events: none;
+}
+
+.hero-food-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 60%;
+  display: block;
+  pointer-events: none;
+  transition: transform 1.2s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+.hero-vignette-overlay {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background: radial-gradient(circle at center, transparent 40%, rgba(12, 56, 35, 0.25) 100%);
+  box-shadow: inset 0 0 40px rgba(0, 0, 0, 0.25);
+}
+
+/* Corner Filigrees on Hero Frame */
+.frame-corner {
+  position: absolute;
+  width: 28px;
+  height: 28px;
+  border-color: var(--accent-gold);
+  border-style: solid;
+  pointer-events: none;
+}
+
+.frame-corner.c-tl {
+  top: -2px;
+  left: -2px;
+  border-width: 3px 0 0 3px;
+  border-top-left-radius: 44px;
+}
+
+.frame-corner.c-tr {
+  top: -2px;
+  right: -2px;
+  border-width: 3px 3px 0 0;
+  border-top-right-radius: 44px;
+}
+
+.frame-corner.c-bl {
+  bottom: -2px;
+  left: -2px;
+  border-width: 0 0 3px 3px;
+  border-bottom-left-radius: 44px;
+}
+
+.frame-corner.c-br {
+  bottom: -2px;
+  right: -2px;
+  border-width: 0 3px 3px 0;
+  border-bottom-right-radius: 44px;
+}
+
+/* --------------------------------------------------------------------------
+   3. Sensory Welcome Note
+   -------------------------------------------------------------------------- */
+
+.welcome-invitation-section {
+  text-align: center;
+  max-width: 820px;
+  margin: 10px 0;
+}
+
+.invitation-kannada {
+  font-family: var(--font-kannada);
+  font-size: 32px;
+  font-weight: 600;
+  color: var(--primary-green);
+  margin-bottom: 8px;
+  letter-spacing: 1px;
+}
+
+.invitation-english {
+  font-family: var(--font-serif);
+  font-size: 24px;
+  font-style: italic;
+  font-weight: 500;
+  color: var(--text-secondary);
+  line-height: 1.4;
+  letter-spacing: 0.5px;
+}
+
+/* --------------------------------------------------------------------------
+   4. Footer / Start Control Area
+   -------------------------------------------------------------------------- */
+
+.home-start-footer {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+/* Error State Banner */
+.start-error-banner {
+  width: 900px;
+  background: #FFF5F5;
+  border: 1.5px solid #E57373;
+  border-radius: 20px;
+  padding: 18px 28px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  box-shadow: 0 10px 24px rgba(229, 115, 115, 0.15);
+  animation: fadeInSlideUp 0.3s ease-out;
+}
+
+.error-icon {
+  color: #D32F2F;
+  flex-shrink: 0;
+}
+
+.error-details {
+  display: flex;
+  flex-direction: column;
+}
+
+.error-text {
+  font-size: 20px;
+  font-weight: 600;
+  color: #B71C1C;
+  margin: 0;
+}
+
+.error-hint {
+  font-size: 16px;
+  color: #D32F2F;
+  margin-top: 2px;
+}
+
+/* Touch to Start Button */
+.touch-start-button {
+  position: relative;
+  width: 900px;
+  height: 160px;
+  background: linear-gradient(135deg, var(--primary-green) 0%, var(--primary-green-dark) 100%);
+  border-radius: 80px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: 
+    0 20px 50px rgba(12, 56, 35, 0.35),
+    0 0 0 1px rgba(197, 160, 89, 0.4);
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  overflow: hidden;
+  padding: 0 40px;
+}
+
+.button-gold-rim {
+  position: absolute;
+  inset: 6px;
+  border: 2px solid var(--accent-gold);
+  border-radius: 74px;
+  pointer-events: none;
+  opacity: 0.75;
+  transition: opacity 0.3s ease;
+}
+
+.button-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  z-index: 2;
+}
+
+.button-ornament {
+  font-size: 26px;
+  color: var(--accent-gold-light);
+  opacity: 0.8;
+}
+
+.button-text {
+  font-family: var(--font-serif);
+  font-size: 46px;
+  font-weight: 700;
+  letter-spacing: 8px;
+  color: var(--bg-cream);
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.4);
+}
+
+.button-subtext {
+  font-family: var(--font-sans);
+  font-size: 17px;
+  font-weight: 500;
+  letter-spacing: 5px;
+  color: var(--accent-gold-light);
+  margin-top: 6px;
+  text-transform: uppercase;
+  z-index: 2;
+  opacity: 0.9;
+}
+
+/* Active and Hover Interactions */
+.touch-start-button:hover:not(:disabled) {
+  transform: translateY(-3px) scale(1.008);
+  box-shadow: 
+    0 28px 65px rgba(12, 56, 35, 0.45),
+    0 0 28px rgba(197, 160, 89, 0.35);
+}
+
+.touch-start-button:hover:not(:disabled) .button-gold-rim {
+  opacity: 1;
+  border-color: var(--accent-gold-light);
+}
+
+.touch-start-button:active:not(:disabled) {
+  transform: translateY(2px) scale(0.995);
+  box-shadow: 0 12px 30px rgba(12, 56, 35, 0.35);
+}
+
+/* Loading State */
+.touch-start-button.loading {
+  background: linear-gradient(135deg, #13442C 0%, #0C3823 100%);
+  cursor: wait;
+}
+
+.button-spinner {
+  color: var(--accent-gold-light);
+  animation: spin 1s linear infinite;
+}
+
+/* Retry Mode */
+.touch-start-button.retry-mode {
+  background: linear-gradient(135deg, #8A3D18 0%, #68260B 100%);
+  box-shadow: 0 20px 50px rgba(138, 61, 24, 0.35);
+}
+
+.touch-start-button.retry-mode .button-gold-rim {
+  border-color: #E29B72;
+}
+
+.button-refresh-icon {
+  color: #FFD2B8;
+  animation: pulse 1.5s ease-in-out infinite;
+}
+
+/* Keyframe Animations */
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.7;
+    transform: scale(0.92);
+  }
+}
+
+@keyframes fadeInSlideUp {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

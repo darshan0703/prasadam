@@ -1,14 +1,65 @@
-# Node & Frontend
+# Dependencies
 node_modules/
 frontend/node_modules/
+backend/venv/
+venv/
+.venv/
+
+# Build and Distribution
 dist/
 frontend/dist/
-.env
-.env.local
-.DS_Store
+build/
 
-# Python & Backend
-backend/venv/
+# Python Cache & Testing
 backend/__pycache__/
-*.pyc
+__pycache__/
+*.py[cod]
+*$py.class
 .pytest_cache/
+
+# Environment and Secrets
+.env
+.env.*
+!.env.example
+backend/.env
+backend/.env.*
+!backend/.env.example
+
+# Operating System & IDE
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# Agent and AI Tooling Artifacts
+.agents/
+skills-lock.json
+
+# Scratch and Development Media
+scratch/
+scratch_videos/
+test_sine.m4a
+tmp/
+temp/
+
+# Excluded Raw Scrapes and Asset Duplicates
+frontend/public/menu-items-originals/
+frontend/src/assets/images/menu-items/
+
+# Duplicate Category and Hero Images in frontend/public/
+frontend/public/category_beverages_sweets.jpg
+frontend/public/category_breads.jpg
+frontend/public/category_curries.jpg
+frontend/public/category_meals_rice.jpg
+frontend/public/category_south_indian.jpg
+frontend/public/category_starters.jpg
+frontend/public/prasadam_hero.jpg
+
+# Offline Image Acquisition Pipeline & Historical Manifests
+backend/image_acquisition_pipeline.py
+backend/build_resumable_queue.py
+backend/image_pipeline_progress.json
+backend/menu_image_research_manifest.json
+backend/menu_item_generation_queue.json
+frontend/src/data/menuItemGenerationQueue.json
+frontend/src/data/menuItemResearchAuditTrail.json

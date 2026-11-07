@@ -1,0 +1,21 @@
+.kiosk-viewport-wrapper {
+  width: 100vw;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #0E1A14;
+  overflow: hidden;
+  position: fixed;
+  inset: 0;
+}
+
+.kiosk-viewport-canvas {
+  flex-shrink: 0;
+  transform-origin: center center;
+  box-shadow: 0 20px 80px rgba(0, 0, 0, 0.6);
+  position: relative;
+  overflow: hidden;
+}

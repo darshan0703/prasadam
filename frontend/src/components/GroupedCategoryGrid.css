@@ -1,0 +1,250 @@
+/* ==========================================================================
+   PRASADAM KIOSK — DESIGN 3: CIRCULAR TRADITIONAL ELEGANCE
+   Grouped Category Grid (Level 1) — Scaled for 1080 x 1920 Kiosk
+   ========================================================================== */
+
+.grouped-category-container {
+  width: 100%;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  padding: 8px 40px 16px 40px;
+  box-sizing: border-box;
+  overflow-y: auto;
+  align-items: center;
+}
+
+/* Category Intro Section */
+.category-browse-intro {
+  text-align: center;
+  margin-bottom: 12px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.browse-flourish-top {
+  margin-bottom: 2px;
+}
+
+.flourish-diamond {
+  color: var(--accent-gold);
+  font-size: 16px;
+  opacity: 0.85;
+}
+
+.browse-title-main {
+  font-family: var(--font-serif);
+  font-size: 36px;
+  font-weight: 700;
+  color: var(--primary-green);
+  margin: 0;
+  letter-spacing: 2px;
+}
+
+.browse-title-kannada {
+  font-family: var(--font-kannada);
+  font-size: 21px;
+  font-weight: 600;
+  color: var(--accent-gold-dark);
+  margin: 3px 0 8px 0;
+}
+
+.browse-ornamental-divider {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+  width: 320px;
+}
+
+.divider-line {
+  flex: 1;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--accent-gold), transparent);
+}
+
+.divider-motif {
+  color: var(--accent-gold);
+  font-size: 13px;
+}
+
+/* 2-Column x 3-Row Grid of Circular Food Medallions (Scaled +30%) */
+.category-medallion-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 470px);
+  gap: 18px 40px;
+  justify-content: center;
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+/* Category Tile Button (Comfortable Full Touch Target) */
+.category-medallion-tile {
+  background: transparent;
+  border: none;
+  padding: 6px 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  cursor: pointer;
+  border-radius: 28px;
+  transition: transform 0.18s cubic-bezier(0.16, 1, 0.3, 1), background-color 0.18s ease;
+  box-sizing: border-box;
+  outline: none;
+  position: relative;
+}
+
+.category-medallion-tile:hover {
+  background: rgba(197, 160, 89, 0.05);
+}
+
+/* Touch Press / Active Feedback */
+.category-medallion-tile:active {
+  transform: scale(0.96);
+  background: rgba(197, 160, 89, 0.09);
+}
+
+/* Circular Medallion Frame with Concentric Gold Rings (Enlarged by ~30%) */
+.medallion-frame-outer {
+  width: 308px;
+  height: 308px;
+  border-radius: 50%;
+  padding: 7px;
+  background: #FFFDF9;
+  border: 2.5px solid var(--accent-gold);
+  box-shadow: 
+    0 12px 32px rgba(12, 56, 35, 0.09),
+    0 3px 10px rgba(197, 160, 89, 0.2);
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.25s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.category-medallion-tile:hover .medallion-frame-outer {
+  border-color: var(--accent-gold-dark);
+  box-shadow: 
+    0 16px 38px rgba(12, 56, 35, 0.14),
+    0 4px 14px rgba(197, 160, 89, 0.3);
+}
+
+.category-medallion-tile:active .medallion-frame-outer {
+  border-color: var(--accent-gold-light);
+  box-shadow: 
+    0 6px 18px rgba(12, 56, 35, 0.16),
+    0 0 0 5px rgba(197, 160, 89, 0.25);
+}
+
+.medallion-frame-secondary {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  padding: 5px;
+  border: 1.2px dashed rgba(197, 160, 89, 0.6);
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.medallion-frame-inner {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  overflow: hidden;
+  position: relative;
+  background: #0C3823;
+  box-sizing: border-box;
+}
+
+.medallion-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+  border-radius: 50%;
+  transition: transform 0.35s ease;
+}
+
+.category-medallion-tile:hover .medallion-img {
+  transform: scale(1.06);
+}
+
+.category-medallion-tile:active .medallion-img {
+  transform: scale(1.02);
+}
+
+/* Centered Label Group — Scaled Up */
+.medallion-details {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 10px;
+  width: 100%;
+}
+
+.medallion-title-english {
+  font-family: var(--font-serif);
+  font-size: 28px;
+  font-weight: 700;
+  color: var(--primary-green);
+  margin: 0;
+  line-height: 1.2;
+  letter-spacing: 0.5px;
+  max-width: 420px;
+  text-align: center;
+  word-wrap: break-word;
+}
+
+.medallion-title-kannada {
+  font-family: var(--font-kannada);
+  font-size: 20.5px;
+  font-weight: 600;
+  color: var(--accent-gold-dark);
+  margin: 4px 0 0 0;
+  line-height: 1.2;
+  text-align: center;
+}
+
+/* Subtle Gold Ornamental Line Under Text */
+.medallion-ornament-line {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  width: 140px;
+  margin: 6px 0;
+}
+
+.line-half {
+  flex: 1;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(197, 160, 89, 0.4), transparent);
+}
+
+.ornament-glyph {
+  color: var(--accent-gold);
+  font-size: 11px;
+  opacity: 0.85;
+}
+
+/* Count Tag */
+.medallion-count-pill {
+  display: inline-block;
+  background: rgba(197, 160, 89, 0.12);
+  color: var(--accent-gold-dark);
+  border: 1px solid rgba(197, 160, 89, 0.32);
+  padding: 4px 16px;
+  border-radius: 9999px;
+  font-family: var(--font-sans);
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+
+
